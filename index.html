@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محرر كود متقدم - النسخة 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/hint/show-hint.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>محرر الكود - النسخة 2.0</h1>
+            <button id="runCode">تشغيل الكود</button>
+            <button id="saveProject">حفظ المشروع</button>
+            <button id="versionControl">عرض النسخ السابقة</button>
+        </header>
+        <div class="tabs">
+            <button class="tab active" data-type="html">HTML</button>
+            <button class="tab" data-type="css">CSS</button>
+            <button class="tab" data-type="js">JavaScript</button>
+        </div>
+        <div class="editor">
+            <div class="editor-section">
+                <textarea id="htmlCode" placeholder="اكتب كود HTML هنا..."></textarea>
+            </div>
+            <div class="editor-section hidden">
+                <textarea id="cssCode" placeholder="اكتب كود CSS هنا..."></textarea>
+            </div>
+            <div class="editor-section hidden">
+                <textarea id="jsCode" placeholder="اكتب كود JavaScript هنا..."></textarea>
+            </div>
+        </div>
+        <iframe id="output" class="output"></iframe>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
